@@ -50,5 +50,4 @@ try:
     print(diff)
 
 finally:
-    pass
-    # driver.close()
+    driver.close()
