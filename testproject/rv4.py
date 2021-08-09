@@ -13,6 +13,7 @@ csak találd meg az egy véletlen hiányzó város nevét
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import numpy as np
 
 options = Options()
 options.headless = False
@@ -43,6 +44,12 @@ try:
         miss_city.clear()
         miss_city.send_keys(_)
         submit_btn.click()
+
+    # próbálkoztam ezzel is
+    diff = np.setdiff1d(cities_list, random_cities_list)
+    print(diff)
+
 finally:
     pass
     # driver.close()
+
